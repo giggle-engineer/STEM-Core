@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		081A45EE1B95639F00565444 /* Build and Install STEM */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 081A45F11B95639F00565444 /* Build configuration list for PBXAggregateTarget "Build and Install STEM" */;
+			buildPhases = (
+				081A45F41B9563B100565444 /* ShellScript */,
+			);
+			dependencies = (
+				081A45F31B9563AC00565444 /* PBXTargetDependency */,
+			);
+			name = "Build and Install STEM";
+			productName = "Build and Install PokeMini";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		081A45F91B95640C00565444 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081A45F81B95640C00565444 /* OpenGL.framework */; };
+		081A45FB1B95641300565444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081A45FA1B95641300565444 /* Cocoa.framework */; };
+		081A45FD1B95642A00565444 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081A45FC1B95642A00565444 /* OpenEmuBase.framework */; };
+		0843FD5B1BA7B3DF00ED70D8 /* STEMGameCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0843FD5A1BA7B3DF00ED70D8 /* STEMGameCore.m */; };
+		0843FD5D1BA7B3ED00ED70D8 /* STEM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0843FD5C1BA7B3ED00ED70D8 /* STEM-Info.plist */; };
+		0843FD611BA7B43700ED70D8 /* stfn.c in Sources */ = {isa = PBXBuildFile; fileRef = 0843FD601BA7B43700ED70D8 /* stfn.c */; };
+		0843FD631BA7B44300ED70D8 /* 1802.c in Sources */ = {isa = PBXBuildFile; fileRef = 0843FD621BA7B44300ED70D8 /* 1802.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		081A45F21B9563AC00565444 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 081A45841B955FA800565444 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 081A458B1B955FA800565444;
+			remoteInfo = PokeMini;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		081A458C1B955FA800565444 /* STEM.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STEM.oecoreplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		081A45F81B95640C00565444 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		081A45FA1B95641300565444 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		081A45FC1B95642A00565444 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEmuBase.framework; path = "/Users/hachidorii/Projects/repos/OpenEmu/VirtualJaguar/../../../../Library/Developer/Xcode/DerivedData/OpenEmu-bhfveylavlxwbkddelpdvazebykd/Build/Products/Debug/OpenEmuBase.framework"; sourceTree = "<absolute>"; };
+		0843FD591BA7B3DF00ED70D8 /* STEMGameCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STEMGameCore.h; path = STEM/STEMGameCore.h; sourceTree = SOURCE_ROOT; };
+		0843FD5A1BA7B3DF00ED70D8 /* STEMGameCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STEMGameCore.m; path = STEM/STEMGameCore.m; sourceTree = SOURCE_ROOT; };
+		0843FD5C1BA7B3ED00ED70D8 /* STEM-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "STEM-Info.plist"; path = "STEM/STEM-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0843FD5E1BA7B3FA00ED70D8 /* STEM-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "STEM-Prefix.pch"; path = "STEM/STEM-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		0843FD601BA7B43700ED70D8 /* stfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stfn.c; path = STEM/stemsrc/stfn.c; sourceTree = SOURCE_ROOT; };
+		0843FD621BA7B44300ED70D8 /* 1802.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = 1802.c; path = STEM/stemsrc/1802.c; sourceTree = SOURCE_ROOT; };
+		0843FD641BA7B45C00ED70D8 /* 1802.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = 1802.h; path = STEM/stemsrc/1802.h; sourceTree = SOURCE_ROOT; };
+		0843FD651BA7B48000ED70D8 /* _case.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _case.h; path = STEM/stemsrc/_case.h; sourceTree = SOURCE_ROOT; };
+		0843FD681BA7B51700ED70D8 /* external.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = external.h; path = STEM/stemsrc/external.h; sourceTree = SOURCE_ROOT; };
+		0843FD691BA7B88A00ED70D8 /* 1802MAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = 1802MAC.h; path = STEM/stemsrc/1802MAC.h; sourceTree = SOURCE_ROOT; };
+		088373371BA8F27600D67F4D /* ext_dos.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ext_dos.c; path = STEM/stemsrc/ext_dos.c; sourceTree = SOURCE_ROOT; };
+		088373381BA8F27600D67F4D /* ext_win.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ext_win.c; path = STEM/stemsrc/ext_win.c; sourceTree = SOURCE_ROOT; };
+		088373391BA8F27600D67F4D /* stem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stem.c; path = STEM/stemsrc/stem.c; sourceTree = SOURCE_ROOT; };
+		0883733A1BA8F27600D67F4D /* winstem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = winstem.c; path = STEM/stemsrc/winstem.c; sourceTree = SOURCE_ROOT; };
+		08B048691BD2349E00C81128 /* OEStudioIISystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEStudioIISystemResponderClient.h; path = "../OpenEmu/Studio II/OEStudioIISystemResponderClient.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		081A45891B955FA800565444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081A45FD1B95642A00565444 /* OpenEmuBase.framework in Frameworks */,
+				081A45FB1B95641300565444 /* Cocoa.framework in Frameworks */,
+				081A45F91B95640C00565444 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		081A45831B955FA800565444 = {
+			isa = PBXGroup;
+			children = (
+				081A458E1B955FA800565444 /* STEM */,
+				081A45F71B9563EF00565444 /* Frameworks */,
+				081A458D1B955FA800565444 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		081A458D1B955FA800565444 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				081A458C1B955FA800565444 /* STEM.oecoreplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		081A458E1B955FA800565444 /* STEM */ = {
+			isa = PBXGroup;
+			children = (
+				08B048691BD2349E00C81128 /* OEStudioIISystemResponderClient.h */,
+				0843FD591BA7B3DF00ED70D8 /* STEMGameCore.h */,
+				0843FD5A1BA7B3DF00ED70D8 /* STEMGameCore.m */,
+				0843FD5F1BA7B41C00ED70D8 /* stemsrc */,
+				081A458F1B955FA800565444 /* Supporting Files */,
+			);
+			name = STEM;
+			path = PokeMini;
+			sourceTree = "<group>";
+		};
+		081A458F1B955FA800565444 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0843FD5C1BA7B3ED00ED70D8 /* STEM-Info.plist */,
+				0843FD5E1BA7B3FA00ED70D8 /* STEM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		081A45F71B9563EF00565444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				081A45FC1B95642A00565444 /* OpenEmuBase.framework */,
+				081A45F81B95640C00565444 /* OpenGL.framework */,
+				081A45FA1B95641300565444 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0843FD5F1BA7B41C00ED70D8 /* stemsrc */ = {
+			isa = PBXGroup;
+			children = (
+				0843FD601BA7B43700ED70D8 /* stfn.c */,
+				0843FD621BA7B44300ED70D8 /* 1802.c */,
+				0843FD641BA7B45C00ED70D8 /* 1802.h */,
+				0843FD691BA7B88A00ED70D8 /* 1802MAC.h */,
+				0843FD651BA7B48000ED70D8 /* _case.h */,
+				0843FD681BA7B51700ED70D8 /* external.h */,
+				088373371BA8F27600D67F4D /* ext_dos.c */,
+				088373381BA8F27600D67F4D /* ext_win.c */,
+				088373391BA8F27600D67F4D /* stem.c */,
+				0883733A1BA8F27600D67F4D /* winstem.c */,
+			);
+			name = stemsrc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		081A458B1B955FA800565444 /* STEM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081A45931B955FA800565444 /* Build configuration list for PBXNativeTarget "STEM" */;
+			buildPhases = (
+				081A45881B955FA800565444 /* Sources */,
+				081A45891B955FA800565444 /* Frameworks */,
+				081A458A1B955FA800565444 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STEM;
+			productName = PokeMini;
+			productReference = 081A458C1B955FA800565444 /* STEM.oecoreplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		081A45841B955FA800565444 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Chloe Stars";
+				TargetAttributes = {
+					081A458B1B955FA800565444 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					081A45EE1B95639F00565444 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 081A45871B955FA800565444 /* Build configuration list for PBXProject "STEM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 081A45831B955FA800565444;
+			productRefGroup = 081A458D1B955FA800565444 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				081A458B1B955FA800565444 /* STEM */,
+				081A45EE1B95639F00565444 /* Build and Install STEM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		081A458A1B955FA800565444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0843FD5D1BA7B3ED00ED70D8 /* STEM-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		081A45F41B9563B100565444 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$USER_LIBRARY_DIR/Application Support/OpenEmu/Cores\"\nrm -rf \"$USER_LIBRARY_DIR/Application Support/OpenEmu/Cores/$PROJECT_NAME.oecoreplugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.oecoreplugin\"{,.dSYM} \"$USER_LIBRARY_DIR/Application Support/OpenEmu/Cores/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		081A45881B955FA800565444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0843FD631BA7B44300ED70D8 /* 1802.c in Sources */,
+				0843FD611BA7B43700ED70D8 /* stfn.c in Sources */,
+				0843FD5B1BA7B3DF00ED70D8 /* STEMGameCore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		081A45F31B9563AC00565444 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 081A458B1B955FA800565444 /* STEM */;
+			targetProxy = 081A45F21B9563AC00565444 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		081A45911B955FA800565444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		081A45921B955FA800565444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		081A45941B955FA800565444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-emamunmvrfzskqcbxvztfjcwdnba/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MSDOS,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../OpenEmu\"/**",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "STEM/STEM-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = STEM;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oecoreplugin;
+			};
+			name = Debug;
+		};
+		081A45951B955FA800565444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-emamunmvrfzskqcbxvztfjcwdnba/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = MSDOS;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../OpenEmu\"/**",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "STEM/STEM-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = STEM;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = oecoreplugin;
+			};
+			name = Release;
+		};
+		081A45EF1B95639F00565444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_MODULE_NAME = PokeMini;
+				PRODUCT_NAME = STEM;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		081A45F01B95639F00565444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_MODULE_NAME = PokeMini;
+				PRODUCT_NAME = STEM;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		081A45871B955FA800565444 /* Build configuration list for PBXProject "STEM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081A45911B955FA800565444 /* Debug */,
+				081A45921B955FA800565444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081A45931B955FA800565444 /* Build configuration list for PBXNativeTarget "STEM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081A45941B955FA800565444 /* Debug */,
+				081A45951B955FA800565444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081A45F11B95639F00565444 /* Build configuration list for PBXAggregateTarget "Build and Install STEM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081A45EF1B95639F00565444 /* Debug */,
+				081A45F01B95639F00565444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 081A45841B955FA800565444 /* Project object */;
+}

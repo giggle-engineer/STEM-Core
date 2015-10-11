@@ -1,0 +1,108 @@
+// **************************************************************************
+//
+//                      CPU Definition file for 1802
+//
+// **************************************************************************
+//
+01-0F   D = READ(R[*F])                 // LDN
+40-4F   D = READ(R[*F]) ; INC(R[*F])    // LDA
+F0      D = READ(R[X])                  // LDX
+72      D = READ(R[X]) ; INC(R[X])      // LDXA
+F8      D = FETCH                       // LDI
+50-5F   WRITE(R[*F],D)                  // STR
+73      WRITE(R[X],D) ; DEC(R[X])       // STXD
+//
+// **************************************************************************
+//
+10-1F   INC(R[*F])                      // INC
+20-2F   DEC(R[*F])                      // DEC
+60      INC(R[X])                       // IRX
+80-8F   D = R[*F] & 0xFF                // GLO
+A0-AF   R[*F] = (R[*F] & 0xFF00) | D    // PLO
+90-9F   D = (R[*F] >> 8) & 0xFF         // GHI
+B0-BF   R[*F] = (R[*F] & 0x00FF) | (D << 8) // PHI
+//
+// **************************************************************************
+//
+F1      D = D | READ(R[X])              // OR
+F9      D = D | FETCH                   // ORI
+F3      D = D ^ READ(R[X])              // XOR
+FB      D = D ^ FETCH                   // XRI
+F2      D = D & READ(R[X])              // AND
+FA      D = D & FETCH                   // ANI
+//
+F6      SHR                             // SHR
+76      SHRC                            // SHRC / RSHR
+FE      SHL                             // SHL
+7E      SHLC                            // SHLC / RSHL
+//
+// **************************************************************************
+//
+F4      ADD(D,READ(R[X]),0)             // ADD
+FC      ADD(D,FETCH,0)                  // ADI
+74      ADD(D,READ(R[X]),DF)            // ADC
+7C      ADD(D,FETCH,DF)                 // ADCI
+//
+F5      SUB(READ(R[X]),D,1)             // SD
+FD      SUB(FETCH,D,1)                  // SDI
+75      SUB(READ(R[X]),D,DF)            // SDB
+7D      SUB(FETCH,D,DF)                 // SDBI
+//
+F7      SUB(D,READ(R[X]),1)             // SM
+FF      SUB(D,FETCH,1)                  // SMI
+77      SUB(D,READ(R[X]),DF)            // SMB
+7F      SUB(D,FETCH,DF)                 // SMBI
+//
+// **************************************************************************
+//
+30      SHORTBRANCH(1)                  // BR
+38      SHORTBRANCH(0)                  // NBR / SKP
+32      SHORTBRANCH(D == 0)             // BZ
+3A      SHORTBRANCH(D != 0)             // BNZ
+33      SHORTBRANCH(DF != 0)            // BDF  / BPZ / BGE
+3B      SHORTBRANCH(DF == 0)            // BNF  / BM / BL
+31      SHORTBRANCH(Q != 0)             // BQ
+39      SHORTBRANCH(Q == 0)             // BNQ
+34-37   SHORTBRANCH(EF[*3] != 0)        // B1-B4
+3C-3F   SHORTBRANCH(EF[*3] == 0)        // BN1-BN4
+//
+// **************************************************************************
+//
+C0      LONGBRANCH(1)                   // LBR
+C8      LONGBRANCH(0)                   // NLBR / LSKP
+C2      LONGBRANCH(D == 0)              // LBZ
+CA      LONGBRANCH(D != 0)              // LBNZ
+C3      LONGBRANCH(DF != 0)             // LBDF
+CB      LONGBRANCH(DF == 0)             // LBNF
+C1      LONGBRANCH(Q != 0)              // LBQ
+C9      LONGBRANCH(Q == 0)              // LBNQ
+//
+// **************************************************************************
+//
+CE      LONGSKIP(D == 0)                // LSZ
+C6      LONGSKIP(D != 0)                // LSNZ
+CF      LONGSKIP(DF != 0)               // LSDF
+C7      LONGSKIP(DF == 0)               // LSNF
+CD      LONGSKIP(Q != 0)                // LSQ
+C5      LONGSKIP(Q == 0)                // LSNQ
+CC      LONGSKIP(IE != 0)               // LSIE
+//
+// **************************************************************************
+//
+00      DEC(R[P]) ; IDLEFLAG = 1        // IDL
+C4      Cycles--                        // NOP
+D0-DF   P = *F                          // SEP
+E0-EF   X = *F                          // SEX
+7B      Q = 1                           // SEQ
+7A      Q = 0                           // REQ
+//
+78      WRITE(R[X],T)                   // SAV
+79      T = (X << 4) | P ; WRITE(R[2],T) ; X = P ; DEC(R[2]) // MARK
+70-71   Temp = READ(R[X]) ; INC(R[X]) ; X = (Temp >> 4) ; P = (Temp & 0x0F) ; IE = (1-*1) // RET,DIS
+//
+// **************************************************************************
+//
+61-67   OUTPORT(*7,READ(R[X])) ; INC(R[X]) // OUT
+69-6F   D = INPORT(*7); WRITE(R[X],D)      // INP
+//
+68      {}                              // Undefined
